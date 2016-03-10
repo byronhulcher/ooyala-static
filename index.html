@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>My Test Player V4 Web Page</title>
+     <!-- V4 JS core is required. Plugins such as skin, discovery and Advertising need to be loaded separately -->
+    <script src="//player.ooyala.com/static/v4/stable/4.1.4/core.min.js"></script>
+    <!-- Change these styles.css and html5-skin.js to your local build if necessary -->
+    <!--<script src="//player.ooyala.com/static/v4/stable/4.1.4/skin-plugin/html5-skin.min.js"></script>-->
+    <script src="//127.0.0.1:8080/build/html5-skin.js"></script>
+    <link rel="stylesheet" href="//player.ooyala.com/static/v4/stable/4.1.4/skin-plugin/html5-skin.min.css"/>
+    
+    <!-- A Video Plugin is required. This example shows the Main Video Plugin -->
+    <script src="//player.ooyala.com/static/v4/stable/4.1.4/video-plugin/main_html5.min.js"></script>
+    <script src="//player.ooyala.com/static/v4/stable/4.1.4/video-plugin/osmf_flash.min.js"></script>
+    <!-- Discovery Module -->
+    <script src="//player.ooyala.com/static/v4/stable/4.1.4/other-plugin/discovery_api.min.js"></script>
+  </head>
+
+  <body>
+    <!--My Player V4 Content.-->
+    <div id='container' style='width:640px; height:360px;'></div>
+    <script>
+      var playerParam = {
+        "pcode": "5zb2wxOlZcNCe_HVT3a6cawW298X",
+        "playerBrandingId": "26e2e3c1049c4e70ae08a242638b5c40",
+        "debug":true,
+        "skin": {
+          // config contains the configuration setting for player skin. Change this path to your local config when necessary.
+          "config": "skin.json"
+        },
+      // Add other embedded player parameters here.
+      };
+      // Surround everything with OO.ready to make sure the script has loaded and initialized.
+      OO.ready(function() {
+        window.pp = OO.Player.create('container', 'RmZW4zcDo6KqkTIhn1LnowEZyUYn5Tb2', playerParam);
+      });
+    </script>
+  </body>
+
+</html>
