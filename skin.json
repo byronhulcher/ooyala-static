@@ -29,10 +29,10 @@
   "responsive": {
     "breakpoints": {
       "sm": {"name": "ooyala-small", "maxWidth": 559, "multiplier": 0.7},
-      "md": {"name": "ooyala-medium", "minWidth": 560, "maxWidth": 1280, "multiplier": 1},
-      "lg": {"name": "ooyala-large", "minWidth": 1281, "multiplier": 1.2}
+      "md": {"name": "ooyala-medium", "minWidth": 560, "maxWidth": 1024, "multiplier": 1},
+      "lg": {"name": "ooyala-large", "minWidth": 1025, "multiplier": 1.2}
     },
-    "aspectRatio": "auto"
+    "aspectRatio": 56.25
   },
   "startScreen": {
     "promoImageSize": "default",
