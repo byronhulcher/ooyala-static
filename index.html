@@ -15,12 +15,27 @@
     <script src="//player.ooyala.com/static/v4/stable/4.1.4/video-plugin/osmf_flash.min.js"></script>
     <!-- Discovery Module -->
     <script src="//player.ooyala.com/static/v4/stable/4.1.4/other-plugin/discovery_api.min.js"></script>
+    <style>
+      #centerColumn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+      }
+      
+      #videoContainer {
+        width: 100%;
+        max-width: 800px;
+      }
+    </style>
   </head>
 
   <body>
     <!--My Player V4 Content.-->
-    <h1>NY Mag Ooyala Test</h1>
-    <div id='container' style='width:640px; height:360px;'></div>
+    <div id="centerColumn">
+      <h1>NY Mag Ooyala Test</h1>
+      <div id='videoContainer'></div>
+    </div>
     <script>
       var playerParam = {
         "pcode": "5zb2wxOlZcNCe_HVT3a6cawW298X",
@@ -34,7 +49,7 @@
       };
       // Surround everything with OO.ready to make sure the script has loaded and initialized.
       OO.ready(function() {
-        window.pp = OO.Player.create('container', 'RmZW4zcDo6KqkTIhn1LnowEZyUYn5Tb2', playerParam);
+        window.pp = OO.Player.create('videoContainer', 'RmZW4zcDo6KqkTIhn1LnowEZyUYn5Tb2', playerParam);
       });
     </script>
   </body>
