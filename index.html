@@ -43,7 +43,17 @@
       <div id='videoContainer'></div>
     </div>
     <script>
-      var contentId = "RucW9oMjE6pRFW_71gpuc8hlKJDcWeBq";
+      
+      function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)", "i"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+      }
+      var contentId = getParameterByName("video") || "RucW9oMjE6pRFW_71gpuc8hlKJDcWeBq"; // NzbXQ4MTE6sR537g6YmgZP3ZXHwjavAz
       var playerParam = {
         "pcode": "N0cmYyOrSYkNVK6-lYgHDAEJiUFl",
         "playerBrandingId": "60b6bf3054a74417a56d08b5889f5116",
