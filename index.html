@@ -43,7 +43,7 @@
       <div id='videoContainer'></div>
     </div>
     <script>
-      var contentId = "NzbXQ4MTE6sR537g6YmgZP3ZXHwjavAz";
+      var contentId = "RucW9oMjE6pRFW_71gpuc8hlKJDcWeBq";
       var playerParam = {
         "pcode": "N0cmYyOrSYkNVK6-lYgHDAEJiUFl",
         "playerBrandingId": "60b6bf3054a74417a56d08b5889f5116",
@@ -51,12 +51,10 @@
         "skin": {
           // config contains the configuration setting for player skin. Change this path to your local config when necessary.
           "config": "//player.ooyala.com/static/v4/stable/4.2.7/skin-plugin/skin.json",
-          "inline": {
-            // controls VAST ads
-            "replayAds": false,
-            "showNonLinearCloseButton": false
-          }
-        }
+        },
+        "replayAds": false,
+        "showNonLinearCloseButton": false,
+        "showLinearAdSkipButton": false
       };
       // Surround everything with OO.ready to make sure the script has loaded and initialized.
       OO.ready(function() {
