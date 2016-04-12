@@ -37,6 +37,14 @@
       .adTitle {
         display: none;
       }
+      
+      .state-screen-info {
+          display: none;
+      }
+      
+      .innerWrapper .control-bar {
+          background: rgba(0,0,0,1);
+      }
     </style>
   </head>
 
@@ -65,7 +73,12 @@
         "skin": {
           // config contains the configuration setting for player skin. Change this path to your local config when necessary.
           "config": "//player.ooyala.com/static/v4/stable/4.2.7/skin-plugin/skin.json",
-        },
+          "inline":{ 
+            "pauseScreen":{ 
+              "screenToShowOnPause":"discovery" 
+            } 
+          } 
+        }, 
         "replayAds": false,
         "showNonLinearCloseButton": false,
         "showLinearAdSkipButton": false,
