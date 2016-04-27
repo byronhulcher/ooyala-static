@@ -55,19 +55,7 @@
       <div id='videoContainer'></div>
     </div>
     <script>
-      var assetCount = 0;
-      function onPlayerCreate(player) {
-        player.mb.subscribe('*', 'test', function(event) {
-          if (event.match(OO.EVENTS.EMBED_CODE_CHANGED)) {
-            assetCount++;
-          }
-          if (event.match(OO.EVENTS.PLAYBACK_READY)) {
-            if (assetCount > 1) {
-              player.mb.publish(OO.EVENTS.INITIAL_PLAY);
-            }
-          }
-        });
-      }
+      
       function getParameterByName(name, url) {
         if (!url) url = window.location.href;
         name = name.replace(/[\[\]]/g, "\\$&");
@@ -94,13 +82,11 @@
         "replayAds": false,
         "showNonLinearCloseButton": false,
         "showLinearAdSkipButton": false,
-        "onCreate": onPlayerCreate
       };
       // Surround everything with OO.ready to make sure the script has loaded and initialized.
       OO.ready(function() {
         window.pp = OO.Player.create('videoContainer', contentId, playerParam);
       });
-
     </script>
   </body>
 
